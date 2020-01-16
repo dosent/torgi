@@ -95,7 +95,7 @@ test_set = tf.contrib.learn.datasets.base.load_csv_with_header(
     target_column=0)
 
 # Определяем, что все параметры цветов имеют реальные значения (подробнее ниже)
-feature_columns = [tf.contrib.layers.real_valued_column("", dimension=5)]
+feature_columns = [tf.contrib.layers.real_valued_column("", dimension=6)]
 
 # Создаем трехслойную DNN-нейросеть с 10, 20 и 10 нейронами в слое
 classifier = tf.contrib.learn.DNNClassifier(
