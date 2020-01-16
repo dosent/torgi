@@ -17,10 +17,10 @@ def prepare_data(data_file_name):
     header = ['<DATE>','<TIME>','<OPEN>','<HIGH>','<LOW>','<CLOSE>','<VOL>']
     df = pd.read_csv(data_file_name, sep=',', names=header)
 
-    df['<OPEN>'].mul(10000000)
-    df['<HIGH>'].mul(10000000)
-    df['<LOW>'].mul(10000000)
-    df['<CLOSE>'].mul(10000000)
+    df['<OPEN>'].multiply(100)
+    df['<HIGH>'].multiply(100)
+    df['<LOW>'].multiply(100)
+    df['<CLOSE>'].multiply(100)
     # Теперь надо разделить конвертированные данные
     # на два набора - один для тренировки (большой)
     # и один для тестирования нейросети (поменьше)
